@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  
   runApp(MyApp());
 }
 
@@ -8,6 +10,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIOverlays([]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -24,6 +27,9 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  
+
   final _input = GlobalKey<FormState>();
 
   String nome;
@@ -34,7 +40,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         backgroundColor: Colors.red,
         centerTitle: true,
-        title: Text('Contador de Inscritos'),
+        title: Text('Contador de Inscritos', style: TextStyle(fontSize: 30),),
       ),
       body: Container(
         height: MediaQuery.of(context).size.height,
@@ -78,6 +84,8 @@ class _HomeState extends State<Home> {
             Container(
               child: CircleAvatar(
                 radius: 100,
+                backgroundColor: Colors.blue[200],
+                // child: Image.asset('assets/img/Icone.png'),
               ),
             ),
             SizedBox(
@@ -86,7 +94,7 @@ class _HomeState extends State<Home> {
             Container(
               child: Center(
                 child: Text(
-                  '0',
+                  ' ',
                   style: TextStyle(fontSize: 50),
                 ),
               ),
