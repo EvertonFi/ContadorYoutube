@@ -1,3 +1,4 @@
+import 'package:contadoryoutube/ApiCanal.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -8,6 +9,8 @@ void main() {
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([]);
@@ -85,7 +88,7 @@ class _HomeState extends State<Home> {
               child: CircleAvatar(
                 radius: 100,
                 backgroundColor: Colors.blue[200],
-                // child: Image.asset('assets/img/Icone.png'),
+                child: Image.asset('assets/img/Icone.png'),
               ),
             ),
             SizedBox(
@@ -94,7 +97,7 @@ class _HomeState extends State<Home> {
             Container(
               child: Center(
                 child: Text(
-                  ' ',
+                  '329',
                   style: TextStyle(fontSize: 50),
                 ),
               ),
