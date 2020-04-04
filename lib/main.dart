@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
   getInfo(String canal) async {
     if (canal != "") {
       var url =
-          "https://www.googleapis.com/youtube/v3/search?part=snippet&q=$canal&type=channel&maxResults=1&key=AIzaSyDjS5xa8lRwf7AlDa48JvVJbpTR8mcgQJI";
+          "https://www.googleapis.com/youtube/v3/search?part=snippet&q=$canal&type=channel&maxResults=1&key=(SUA CHAVE AQUI)"; //Retire o parênteses
 
       var response = await http.get(url);
 
